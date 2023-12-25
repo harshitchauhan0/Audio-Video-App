@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener((v)->{
             Intent audio = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             audio.setType("audio/*");
+            //     (or for video)     audio.setType("video/*");
             startActivityForResult(Intent.createChooser(audio, "Select Video"), PICK_AUDIO);
         });
     }
